@@ -11,6 +11,7 @@ export default function App()  {
 
   const [movieList,setMovieList] = useState([])
   const [featuredMovie,setFeaturedMovie] = useState(null)
+  const [blackHeader,setBlackHeader] = useState(false)
 
   useEffect(() =>{
     const loadAll = async () => {
@@ -32,7 +33,9 @@ export default function App()  {
 
   return (
     <div className="page">
-      <Header />
+
+      <Header black={blackHeader}/>
+
       {featuredMovie &&
         <FeaturedMovie item={featuredMovie} />
       }

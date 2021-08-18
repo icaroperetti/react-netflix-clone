@@ -1,10 +1,20 @@
 import React from "react"
-import './header.css'
+import "./header.css"
 
-const Header = () => {
+
+const Header = ({black}) => {
   return (
-    <header>
-      ...
+    <header className={black ? 'blackColor' : ''}>
+      <div className="header--logo">
+        <a href="/">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2014_logo.svg" alt="Logo_Netflix" />
+        </a>
+      </div>
+      <div className="header--user">
+        <a href="/">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Usuário" />
+        </a>
+      </div>
     </header>
   )
 }
