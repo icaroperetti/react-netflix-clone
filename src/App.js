@@ -2,7 +2,8 @@ import React,{useEffect,useState}from "react"
 import api from "./api"
 
 import MovieRow from "./components/MovieRow/MovieRow"
-import FeaturedMovie from "./components/MovieRow/FeaturedMovie/FeaturedMovie"
+import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie"
+import Header from "./components/Header/Header"
 
 import './App.css'
 
@@ -31,7 +32,7 @@ export default function App()  {
 
   return (
     <div className="page">
-
+      <Header />
       {featuredMovie &&
         <FeaturedMovie item={featuredMovie} />
       }
