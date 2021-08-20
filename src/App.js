@@ -62,6 +62,12 @@ export default function App()  {
          <MovieRow key={key} title={item.title} items={item.items}/>
         ))}
       </section>
+
+      <footer>
+         Feito com <span role="img" aria-label="heart">❤️</span> <br/>
+         Direitos de imagem a Netflix<br/>
+         Dados extraidos do site <a href="https://www.themoviedb.org/">The Movie DB</a>
+      </footer>
     </div>
   )
 }
