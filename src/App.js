@@ -31,6 +31,23 @@ export default function App()  {
     loadAll()
   },[])
 
+
+   useEffect(() =>{
+     const scrollListner = () => {
+      if(window.scrollY > 20){
+        setBlackHeader(true)
+      }else{
+        setBlackHeader(false)
+      }
+     }
+
+     window.addEventListener('scroll', scrollListner)
+
+     return () => {
+       window.removeEventListener('scroll', scrollListner)
+     }
+   })
+
   return (
     <div className="page">
 
